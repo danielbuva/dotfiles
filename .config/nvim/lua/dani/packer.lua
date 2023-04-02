@@ -16,9 +16,6 @@ vim.cmd.colorscheme 'nordic'
       config = function()
           require("trouble").setup {
               icons = false,
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
           }
       end
   })
@@ -59,6 +56,9 @@ vim.cmd.colorscheme 'nordic'
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+  use('wakatime/vim-wakatime')
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 
 end)
 
