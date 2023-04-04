@@ -1,7 +1,7 @@
 -- require('kyotonight').setup({
 --     disable_background = true
 -- })
-
+--
 function ColorMyPencils(color)
 	color = color or "kyotonight"
 	vim.cmd.colorscheme(color)
