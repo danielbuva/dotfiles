@@ -8,12 +8,67 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   })
 
-use 'AlexvZyl/nordic.nvim'
-vim.cmd.colorscheme 'nordic'
+  use('voidekh/kyotonight.vim')
 
   use({
       "folke/trouble.nvim",
       config = function()
+require('kyotonight').setup({
+    disable_background = true
+})
+
+function ColorMyPencils(color)
+	color = color or "kyotonight"
+	vim.cmd.colorscheme(color)
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+ColorMyPencils()
+equire('kyotonight').setup({
+    disable_background = true
+})
+
+function ColorMyPencils(color)
+	color = color or "kyotonight"
+	vim.cmd.colorscheme(color)
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+ColorMyPencils()
+equire('kyotonight').setup({
+    disable_background = true
+})
+
+function ColorMyPencils(color)
+	color = color or "kyotonight"
+	vim.cmd.colorscheme(color)
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+ColorMyPencils()
+equire('kyotonight').setup({
+    disable_background = true
+})
+
+function ColorMyPencils(color)
+	color = color or "kyotonight"
+	vim.cmd.colorscheme(color)
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+ColorMyPencils()
           require("trouble").setup {
               icons = false,
           }
@@ -53,12 +108,20 @@ vim.cmd.colorscheme 'nordic'
   }
 
   use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
+  --  use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   use('wakatime/vim-wakatime')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
+  use('christoomey/vim-tmux-navigator')
+  use('szw/vim-maximizer')
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
 
 end)
 

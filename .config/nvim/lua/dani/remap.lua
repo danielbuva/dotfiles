@@ -2,8 +2,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CRv>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CRv>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -45,4 +45,16 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>sv", "<C-w>v")
+vim.keymap.set("n", "<leader>sh", "<C-w>s")
+vim.keymap.set("n", "<leader>se", "<C-w>=")
+vim.keymap.set("n", "<leader>sx", ":close<CR>")
+
+vim.keymap.set("n", "<leader>to", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>tx", ":tabclose<CR>")
+vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
+vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
+
+vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
