@@ -77,10 +77,6 @@ return require("packer").startup(function(use)
 			require("gitsigns").setup()
 		end,
 	})
-	use({
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
+
+	use("andweeb/presence.nvim")
 end)
