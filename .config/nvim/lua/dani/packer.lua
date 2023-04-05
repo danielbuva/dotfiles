@@ -77,6 +77,6 @@ return require("packer").startup(function(use)
 			require("gitsigns").setup()
 		end,
 	})
-
+	use("itchyny/lightline.vim")
 	use("andweeb/presence.nvim")
 end)
