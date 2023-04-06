@@ -4,31 +4,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-
-	use("voidekh/kyotonight.vim")
-
-	use({
-		"folke/trouble.nvim",
-		config = function()
-			require("trouble").setup({
-				icons = false,
-			})
-		end,
-	})
-
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("nvim-treesitter/playground")
-	use("theprimeagen/harpoon")
-	use("theprimeagen/refactoring.nvim")
-	use("mbbill/undotree")
-	use("tpope/vim-fugitive")
-	use("nvim-treesitter/nvim-treesitter-context")
-
-	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v1.x",
 		requires = {
@@ -51,25 +26,30 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use("folke/zen-mode.nvim")
-	--  use("github/copilot.vim")
-	use("eandrju/cellular-automaton.nvim")
-	use("laytan/cloak.nvim")
-	use("wakatime/vim-wakatime")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jayp0521/mason-null-ls.nvim")
-	use("MunifTanjim/prettier.nvim")
-	use("christoomey/vim-tmux-navigator")
-	use("szw/vim-maximizer")
 	use({
-		"numToStr/Comment.nvim",
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = function()
-			require("Comment").setup()
+			require("lsp_lines").setup()
+		end,
+	})
+	use({
+		"folke/trouble.nvim",
+		config = function()
+			require("trouble").setup({
+				icons = false,
+			})
 		end,
 	})
 
-	use("windwp/nvim-autopairs")
-	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter-context")
+	use("nvim-treesitter/playground")
 
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -77,6 +57,32 @@ return require("packer").startup(function(use)
 			require("gitsigns").setup()
 		end,
 	})
+	use("tpope/vim-fugitive")
+	use("mbbill/undotree")
+
+	use("christoomey/vim-tmux-navigator")
+	use("theprimeagen/harpoon")
+	use("szw/vim-maximizer")
+
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("jayp0521/mason-null-ls.nvim")
+	use("MunifTanjim/prettier.nvim")
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
+	use("windwp/nvim-autopairs")
+
+	use("voidekh/kyotonight.vim")
 	use("itchyny/lightline.vim")
+	use("eandrju/cellular-automaton.nvim")
 	use("andweeb/presence.nvim")
+	use("wakatime/vim-wakatime")
+	-- use("folke/zen-mode.nvim")
+	-- use("laytan/cloak.nvim")
+	-- use("theprimeagen/refactoring.nvim")
 end)

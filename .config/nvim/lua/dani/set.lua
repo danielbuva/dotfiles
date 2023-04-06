@@ -35,3 +35,7 @@ vim.opt.colorcolumn = ""
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+vim.o.laststatus = 2
+vim.o.showmode = false
+vim.o.shortmess = vim.o.shortmess .. "F"
